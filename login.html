@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Latest compiled and minified CSS  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/
+	4.0.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/ 
+     jquery/3.3.1/jquery.min.js"> -->
+    </script>
+    <!-- Popper JS  -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ 
+    popper.js/1.12.9/umd/popper.min.js"> -->
+    </script>
+    <!-- Latest compiled JavaScript  -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/
+	4.0.0/js/bootstrap.min.js"> -->
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
+</head>
+
+<body><br>
+
+    <section class="vh-100">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 text-black d-flex main-div-style">
+                    <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 pt-5 pt-xl-0 mt-xl-n5 main-sub1-div-style">
+                        <form autocomplete="off"action="/signup" method="post" id="signupForm" style="width: 20rem;">
+                            <div class="text-center" style="padding-top: 2rem;">
+                                <span class="h2 fw-bold mb-0 login-page-top-logo" >
+                                    <i class="fas fa-user-circle" style="font-size: 45px;padding: 10px;"></i>Login</span>
+                            </div>
+                            <div class="form-outline mb-4 divForAccessCss">
+                                <input type="email" class="form-control padding-bet-inputs" name="email" id="email" required />
+                                <label class="form-label anim-effect focus" for="form2Example18">Email address</label>
+                            </div>
+                            <div class="form-outline divForAccessCss">
+                                <input type="password" class="form-control" name="password" id="password" required />
+                                <label class="form-label anim-effect" for="form2Example28">Password</label>
+                            </div>
+                            <div class="row col-12 loginPage-InnerForm-CreateNewAccAndForGetPass" >
+                                <a class="text-muted" style="color: #727a83!important;font-size:14px" href="/login">Create new account ?</a>
+                                <a class="text-muted loginPage-InnerForm-ForGetPass" href="#!">Forgot password?</a>
+                            </div>
+                            <div class="pt-1 mb-4 text-center loginPage-InnerForm-buttonDiv">
+                                <button class="btn btn-info btn-lg btn-block main-sub1-div-style-form-button" type="submit">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .main-div-style{
+            justify-content: center;
+            align-content: center;
+        }
+        .main-sub1-div-style{
+            border: 1px solid #d9d9e1;
+            border-radius: 15px;
+            margin-top:2rem;
+            margin-bottom:2.5rem;
+            box-shadow: -5px 0px 70px 3px #d1cccc;
+        }
+        .main-sub1-div-style-form-button{
+            width: 70%;
+            height: 37px;
+            background-color: #2f893e;
+            font-size: 18px;
+            display: flex;
+            border: none;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .loginPage-InnerForm-CreateNewAccAndForGetPass{
+            padding-top: 13px;
+            padding-bottom: 9px;flex-direction: column;
+        }
+        .loginPage-InnerForm-ForGetPass{
+            color: #727a83!important;
+            font-size: 12px;
+            padding-left: 5px;
+        }
+        .loginPage-InnerForm-buttonDiv{
+            display: flex;
+            justify-content: center;    
+            margin-bottom: 15px;
+            margin-top: 14px;
+        }
+        label{
+            color: rgb(207 29 29);
+            position: absolute;
+            right: 0px;
+            font-size: 12px;
+            top: 43px;
+        }
+        .divForAccessCss {
+            position: relative;
+        }
+        .anim-effect {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 13px;
+            transition: 0.5s ease-in-out;
+            color: #604545;
+            width: 8rem;
+        } 
+        .padding-bet-inputs {
+            margin: 35px 0px;
+
+        }
+         input:focus~.anim-effect,
+        input:valid~.anim-effect {
+            top: -30px;
+            left: -5px;
+            color: black;
+        }
+        .login-page-top-logo{
+            color: #524747;    
+            font-size: 30px;
+            color: #1c1919;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+
+<script src="mm.js"></script>
+    <script>
+
+        $().ready(function () {
+            $("#signupForm").validate({
+                // in 'rules' user have to specify all the constraints for respective fields
+                rules: {
+                    password: {
+                        required: true,
+                        minlength: 6
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                },
+                messages: {
+                    password: {
+                        required: "Please enter a password",
+                        minlength: "Password minimum 6 character.",
+                        maxlength:'Please enter no more than 16 characters.'
+                    },
+                    email:{
+                        required:'Enter your Email Address'
+                    }
+                }
+            });
+        });
+
+    </script>
+        <script src="https://kit.fontawesome.com/5ae03196e4.js" crossorigin="anonymous"></script>

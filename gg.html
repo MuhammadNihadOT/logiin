@@ -21,7 +21,7 @@
         <div class="container-fluid">
             <div class="row">
               
-                <div class="col-sm-12 text-black d-flex main-div-style" style="margin-top: 2rem;">
+                <div class="col-sm-12 text-black d-flex main-div-style skip-icon" style="margin-top: 2rem;">
                   <div>
                     <a  onclick="Windowless(1)" style="cursor: pointer;">
                       <i  class="far fa-times-circle" style="font-size: 23px;" ></i>
@@ -31,7 +31,7 @@
                     <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 pt-5 pt-xl-0 mt-xl-n5 main-sub1-div-style" style="" id="main-div">
                       
                         <form action="/login" method="post" id="LoginForm" style="width: 20rem;">
-                            <div class="text-center" id="logo-padding-top" style="padding-top: 2rem;">
+                            <div class="text-center logo-padding-bottom">
                                 <span class="h2 fw-bold mb-0 login-page-top-logo" >
                                     <i class="fas fa-user-circle" style="font-size: 45px;padding: 10px;"></i>Login</span>
                             </div>
@@ -116,17 +116,32 @@ input:valid~.anim-effect {
     left: -5px!important;
     color: black!important;
 }
-@media (max-width: 380px){
-    #logo-padding-top{
-padding-top: 0px;
 
+.logo-padding-bottom{
+    padding-top: 2rem;
+}
+
+@media (max-width: 450px){
+    .logo-padding-bottom{
+        padding-bottom:1rem;
+        
+        padding-top: 0rem;
     }
     #main-div{
-        width: 335px;
+        width: 330px;
     }
     .responsive-for-xm{
         width: 240px;
     }
+    .main-sub1-div-style{
+        width: 330px;
+    }
+    /* .skip-icon{
+        position: absolute;
+    top: 11%;
+    /* right: 20%; 
+    left: 19%;
+    } */
 
 }
 
